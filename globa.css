@@ -1,0 +1,610 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-image: url("background.jpg");
+    backdrop-filter: blur(3px);
+  }
+  body#header.custom-background {
+    background-image: none;
+}
+  
+  /* reponsive styles  */
+  /* ------------------------- */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+  
+  
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  @media only screen and (min-width: 550px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+
+  .container{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+
+
+  /* styles of navbar of the site */
+  /* ----------------------------------- */
+  .topnav {
+    overflow: hidden;
+    background-color: #ffb3b3;
+    position: sticky;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    transition: background-color 0.4s linear;
+  }
+  
+  .topnav a:hover {
+    background-color: #df80ff;
+    transition: all 0.5s;
+  }
+  
+  .topnav a.active {
+    background-color: #df80ff ;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive { position: fixed;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+/* background image with scroling efext  */
+/* ----------------------------------------------- */
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("last.jpg");
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* in background image withe scrollinge efect is text. here is style of it */
+#header h2{
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 15%;
+}
+
+/* button eich looks like drawing withe pan */
+.button {
+    background-color: #df80ff;
+    border: 0 solid #E5E7EB;
+    color: white;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    padding: 15px;
+}
+}
+
+.buttonRotateR{transform: rotate(-1deg);}
+.buttonRotateL{transform: rotate(+1deg);}
+  
+/* here i set border of button wich is litel bit haer then button */
+.button:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+  /* here is hover off drawing  button */
+.button:hover:after {
+    bottom: 2px;
+    left: 2px;
+}
+  
+@media (min-width: 768px) {
+    .button {
+      padding: .75rem 3rem;
+      font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .button{
+        font-size: 15px;
+        width: 50%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+  }
+
+/* in background image withe scroll effect is three divs withe contact informacion hire is styles */
+.contactParent{
+margin-top: 47vh;
+}
+
+.contactParent div{
+    line-height: 23px;
+    color: white;
+    text-align: center;
+}
+
+.contactParent div p{
+    height: 150px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.notSee{
+    display: none;
+}
+/* if screen withe is laser than 768px it reqwest will remowe aontact informacion and the wile popo up enoder one wich is lower */
+/* i also chainging small  css */
+@media only screen and (max-width: 768px) {
+    .contactParent{
+        display: none;
+    }
+
+    .notSee{
+        display: block;
+    }
+
+    .contactParent{
+        margin-top: 0vh;
+        
+    }
+
+    .contactParent div{
+        color: black;
+    }
+
+    .contactParent div p{
+        border: 1px solid black;
+        background-color: #ffeae2;
+    }
+
+}
+
+/* adding paddings to site */
+.paddings{
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+/* about gvanca withe img ans littel text */
+/* ------------------------------------------- */
+.about{
+  background-color: #f3e5e1;
+}
+
+.story-text{
+  text-align: center;
+  padding-top: 13%;
+}
+
+@media only screen and (max-width: 768px) {
+  .story-text{
+    padding-top: 1%;
+  }
+}
+
+.story-text p{
+  padding: auto;
+  font-size: 20px;
+}
+
+.story-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.story-img img{
+  width: 80%;
+  height: auto;
+}
+
+/* 4 color for qwiqe viwe */
+/* ------------------------ */
+
+.colorImages h2{
+  text-align: center;
+  font-size: 30px;
+}
+
+.colorImages div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colorImages div img{
+  image-resolution: 150;
+  width: 100%;
+  object-fit: cover;
+  height: 350px;
+  border: solid #ffcccc 10px;
+  transition: transform 0.7s linear; /* vendorless fallback */
+}
+
+@media (max-width: 550px) {
+  .colorImages div img{
+    width: auto;
+  }
+}
+
+.colorImages div img:hover{
+  transform: scale(1.1);
+  transition: all 0.7s;
+}
+
+.colorImages div img:hover{
+  border: solid 10px #df80ff;
+}
+
+
+/* waive button css withe little animacione */
+/* --------------------------------------------- */
+.waivButton {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #faaaaa;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #ffcccc;
+
+  display: flex;
+margin: auto;
+}
+
+.waivButton span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.waivButton span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.waivButton:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #df80ff;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.waivButton:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.waivButton:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+
+
+
+/* first carousel of site withe image of manicure desine */
+/* ----------------------------------------------------- */
+.mySlides {display: none;}
+
+.mySlides img{
+  width: auto;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* text in carousel div withe button */
+.desineText{
+  height: 450px;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .desineText{
+    height: auto;
+  }
+}
+
+
+/* second caroulse withe images of shrilac */
+/* --------------------------------------- */
+
+.caruselSlide {display: none;}
+
+.slideshowContainer{
+  margin: auto;
+  max-width: 600px;
+  position: relative;
+}
+
+.caruselSlide img{
+  border-radius: 20px;
+  max-height: 500px;
+  object-fit: cover;
+  width: auto;
+
+  object-position: 20% 30%;
+}
+
+.numberCheck{
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dotMrker{
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activeSrilac {
+  background-color: #717171;
+}
+
+.instagramDiv img{
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.containerInsta {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: skyblue;
+}
+
+.containerInsta:hover .overlay {
+  opacity: 0.5;
+}
+
+.icon {
+  color: white;
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* dive withe map and littel text */
+/* ------------------------------ */
+.mapText{
+  text-align: center;
+  padding-top: 13%;
+}
+
+.mapText p{
+  padding: auto;
+  font-size: 20px;
+}
+
+
+/* dive withe working place photos and littel descripshon */
+.firstWorkPlace img{
+width: 100%;
+height: 500px;
+object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .firstWorkPlace img{
+    height: 250px;
+    }
+}
+
+.secondWorkPlace  :first-child{
+  display: flex;
+  margin-top: 0px;
+}
+
+.secondWorkPlace img{
+  width: 100% ;
+  height: 160px;
+  object-fit: cover;
+  display: flex;
+  margin-top: 10px;
+}
+
+.workPlaceText{
+  height: 500px;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .workPlaceText{
+    height: auto;
+  }
+}
+
+/* last contact and workig informacion */
+.dashbord i{
+  color: rgb(245, 151, 151);
+}
+
+.dashbord{
+  line-height: 2;  
+}
